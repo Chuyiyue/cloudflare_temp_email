@@ -3,20 +3,20 @@ main = "src/worker.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = [ "nodejs_compat" ]
 # if you want use custom_domain, you need to add routes
-# routes = [
-# 	{ pattern = "temp-email-api.xxxxx.xyz", custom_domain = true },
-# ]
+ routes = [
+ 	{ pattern = "temp--mail-api.freyue.workers.dev", custom_domain = true },
+ ]
 
 # enable cron if you want set auto clean up
 # [triggers]
 # crons = [ "0 0 * * *" ]
 
-# send_email = [
-#    { name = "SEND_MAIL" },
-# ]
+ send_email = [
+    { name = "SEND_MAIL" },
+ ]
 
 [vars]
-# TITLE = "Custom Title" # custom title
+TITLE = "STARRY Mail" # custom title
 # ANNOUNCEMENT = "Custom Announcement"
 PREFIX = "tmp"
 # address check REGEX, if not set, will not check
@@ -27,15 +27,15 @@ PREFIX = "tmp"
 # MIN_ADDRESS_LEN = 1
 # MAX_ADDRESS_LEN = 30
 # IF YOU WANT TO MAKE YOUR SITE PRIVATE, UNCOMMENT THE FOLLOWING LINES
-# PASSWORDS = ["123", "456"]
+ PASSWORDS = ["alone"]
 # For admin panel
-# ADMIN_PASSWORDS = ["123", "456"]
+ ADMIN_PASSWORDS = ["aloneicymoon"]
 # warning: no password or user check for admin portal
 # DISABLE_ADMIN_PASSWORD_CHECK = false
 # ADMIN CONTACT, CAN BE ANY STRING
 # ADMIN_CONTACT = "xx@xx.xxx"
 DEFAULT_DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # domain name for no role users
-DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # all domain names
+DOMAINS = ["outtw.com" , "oonn.me"] # all domain names
 # For chinese domain name, you can use DOMAIN_LABELS to show chinese domain name
 # DOMAIN_LABELS = ["中文.xxx", "xxx.xxx2"]
 # USER_DEFAULT_ROLE = "vip" # default role for new users(only when enable mail verification)
@@ -54,18 +54,18 @@ ENABLE_USER_DELETE_EMAIL = true
 # Allow automatic replies to emails
 ENABLE_AUTO_REPLY = false
 # Allow webhook
-# ENABLE_WEBHOOK = true
+ ENABLE_WEBHOOK = true
 # Footer text
 # COPYRIGHT = "Dream Hunter"
 # DISABLE_SHOW_GITHUB = true
 # default send balance, if not set, it will be 0
 # DEFAULT_SEND_BALANCE = 1
-# NO_LIMIT_SEND_ROLE = "vip" # the role which can send emails without limit
+ NO_LIMIT_SEND_ROLE = "vip" # the role which can send emails without limit
 # Turnstile verification
 # CF_TURNSTILE_SITE_KEY = ""
 # CF_TURNSTILE_SECRET_KEY = ""
 # telegram bot
-# TG_MAX_ADDRESS = 5
+ TG_MAX_ADDRESS = 50
 # telegram bot info, predefined bot info can reduce latency of the webhook
 # TG_BOT_INFO = "{}"
 # global forward address list, if set, all emails will be forwarded to these addresses
@@ -77,13 +77,13 @@ ENABLE_AUTO_REPLY = false
 
 [[d1_databases]]
 binding = "DB"
-database_name = "xxx"
-database_id = "xxx"
+database_name = "temp-mail"
+database_id = "c080c041-f938-47a6-aed4-0bf423706562"
 
 # kv config for send email verification code
-# [[kv_namespaces]]
-# binding = "KV"
-# id = "xxxx"
+ [[kv_namespaces]]
+ binding = "KV"
+ id = "7e3b304f82654666b0950cd1721c3623"
 
 # ratelimit config for /api/new_address
 # [[unsafe.bindings]]
